@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Atenção aprendi que essa linha de código nunca vai mudar serve para conectar com servidor -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Atenção aqui a mesma ideia de cima, porem entrega arquivos da fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Atenção aprendi que essa linha de código sempre muda, traz a fonte de verdade! -->
+    <link rel="stylesheet" href="./main.css"> <!-- esse link para conectar o css ao htlm -->
+</head>
+<body>
+<div class="container"> <!-- aqui ele criou o container para centralizar a tabela -->
+
+    <header><!-- cabeçalho -->
+        <img src="./images/logo.png" alt="capelo e diploma">
+        <h1>Calculadora de médias</h1> <!-- título -->
+    </header>
+    <form id="form-atividade"> <!-- Formulario -->
+        <input type="text" id="nome-atividade"required placeholder="Nome da atividade"/><!-- lembre required é campo de preenchimento obrigatório -->
+        <input type="number" id="nota-atividade"required placeholder="Nota" min="0" max="10"/><!-- campo numerico com mín. e máx. -->
+        <button type="submit">Adicionar +</button> <!-- botão add -->
+    </form>
+    <table cellspacing="0"> <!--Tabela -->
+        <thead> <!-- cabeçalho da tabela-->
+            <tr><!-- linha -->
+                <th> Nome da atividade</th><!-- nome das colunas th"-->
+                <th>Nota da Atividade</th> <!-- nome das colunas th"-->
+                <th>Aprovado?</th> <!-- nome das colunas th"-->
+            </tr>
+        </thead>
+        <tbody> <!-- para add conteudo da tabela" -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Média final</td>
+                <td id="media-final-valor">---</td>
+                <td id="media-final-resultado">---</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
